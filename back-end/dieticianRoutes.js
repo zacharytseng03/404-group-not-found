@@ -13,7 +13,7 @@ function query_success(response, message){
 
 //get dieitician with the email and also update the firebase token as well
 //done
-app.post("/get", async (req,res)=>{
+router.post("/get", async (req,res)=>{
     try{
         const con = req.app.get('dbConnection')
         const Email=req.body.p1
@@ -47,7 +47,7 @@ app.post("/get", async (req,res)=>{
     }
   })
   
-app.get("/delete", async (req,res)=>{
+router.get("/delete", async (req,res)=>{
     try{
         const con = req.app.get('dbConnection')
         const DID=req.query.p1

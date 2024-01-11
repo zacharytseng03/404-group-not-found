@@ -1,4 +1,5 @@
 const express = require('express')
+const fs = require("fs")
 const router = express.Router()
 const { UIDcheck, ItemIDcheck} = require('./check')
 const UPCKeypath='./UPCKey.txt'
