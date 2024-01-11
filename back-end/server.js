@@ -66,7 +66,7 @@ admin.initializeApp({
 const certs = {
   key: fs.readFileSync('./key.pem'),
   cert: fs.readFileSync('./cert.pem'),
-  passphrase: fs.readFileSync('./passphase.txt')
+  passphrase: fs.readFileSync('./passphrase.txt', 'utf8').trim()
 }
 
 const server = https.createServer(certs, app)
