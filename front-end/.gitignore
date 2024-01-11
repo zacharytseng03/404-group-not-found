@@ -13,4 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-/app/src/main/res/raw/certificate.pem
+/app/src/main/res/raw/cert.pem
