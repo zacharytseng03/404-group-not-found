@@ -63,19 +63,10 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 })
 
-let password
-fs.readFile('./passphase.txt', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading the file:', err)
-  } else {
-    password = data
-  }
-})
-
 const certs = {
   key: fs.readFileSync('./key.pem'),
   cert: fs.readFileSync('./cert.pem'),
-  passphrase: password
+  passphrase: fs.readFileSync('./passphase.txt')
 }
 
 const server = https.createServer(certs, app)
